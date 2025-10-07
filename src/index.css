@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 221 63% 20%;
+
+    /* Naik Kelas Brand Colors */
+    --primary: 221 63% 33%; /* Navy Blue #1E3A8A */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 221 63% 45%;
+    
+    --secondary: 160 84% 39%; /* Emerald Green #10B981 */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 160 84% 50%;
+    
+    --accent: 48 96% 53%; /* Yellow #FACC15 */
+    --accent-foreground: 221 63% 20%;
+    
+    /* Neutral colors */
+    --muted: 210 20% 98%; /* Light gray #F9FAFB */
+    --muted-foreground: 221 20% 45%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 221 63% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 63% 20%;
+    
+    --border: 221 20% 90%;
+    --input: 221 20% 90%;
+    --ring: 221 63% 33%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-aurora: linear-gradient(135deg, hsl(221, 63%, 33%) 0%, hsl(160, 84%, 39%) 50%, hsl(48, 96%, 53%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(221, 63%, 33%) 0%, hsl(221, 63%, 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(30, 58, 138, 0.05);
+    --shadow-md: 0 4px 12px rgba(30, 58, 138, 0.08);
+    --shadow-lg: 0 8px 24px rgba(30, 58, 138, 0.12);
+    --shadow-xl: 0 16px 48px rgba(30, 58, 138, 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  [id] {
+    scroll-margin-top: 3rem; 
+  }
+
+  .dark {
+    --background: 221 63% 10%;
+    --foreground: 0 0% 98%;
+
+    --primary: 221 63% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 221 63% 55%;
+    
+    --secondary: 160 84% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 160 84% 55%;
+    
+    --accent: 48 96% 60%;
+    --accent-foreground: 221 63% 10%;
+    
+    --muted: 221 20% 15%;
+    --muted-foreground: 221 20% 70%;
+    
+    --card: 221 63% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 221 63% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --border: 221 20% 25%;
+    --input: 221 20% 25%;
+    --ring: 221 63% 45%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --gradient-aurora: linear-gradient(135deg, hsl(221, 63%, 25%) 0%, hsl(160, 84%, 35%) 50%, hsl(48, 96%, 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(221, 63%, 15%) 0%, hsl(221, 63%, 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(221, 63%, 12%) 0%, hsl(221, 63%, 15%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer utilities {
+  .gradient-aurora {
+    background: var(--gradient-aurora);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .aurora-glow {
+    position: relative;
+  }
+  
+  .aurora-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      hsl(221, 63%, 33%) 0deg,
+      hsl(160, 84%, 39%) 120deg,
+      hsl(48, 96%, 53%) 240deg,
+      hsl(221, 63%, 33%) 360deg
+    );
+    opacity: 0.15;
+    filter: blur(60px);
+    z-index: -1;
+    animation: aurora-rotate 8s linear infinite;
+  }
+  
+  @keyframes aurora-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+    }
+  }
+  
+  .pulse-cta {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .hover-lift {
+    @apply transition-smooth hover:scale-105 hover:shadow-card-hover;
+  }
+  
+  .claymorphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.1);
+  }
+}
