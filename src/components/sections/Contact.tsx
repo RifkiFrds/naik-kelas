@@ -50,7 +50,7 @@ const Contact = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.1 }}
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -59,7 +59,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <span className="inline-block text-sm font-semibold text-accent bg-accent/10 px-4 py-2 rounded-full mb-4">
             Hubungi Kami
@@ -84,7 +84,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index, duration: 0.8 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.1 }}
             >
               <div
                 className={`w-14 h-14 ${method.bgColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-smooth`}
@@ -109,7 +109,7 @@ const Contact = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <div className="gradient-hero p-8 md:p-12">
             <div className="relative z-10 max-w-3xl mx-auto text-center">
@@ -164,7 +164,7 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + idx * 0.2, duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                   >
                     <div className="text-3xl font-heading font-bold text-white mb-1">
                       {trust.value}
@@ -183,7 +183,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <p className="text-muted-foreground">
             <strong className="text-foreground">Jam Operasional:</strong> Senin - Jumat: 09:00 - 18:00 WIB | Sabtu: 09:00 - 15:00 WIB

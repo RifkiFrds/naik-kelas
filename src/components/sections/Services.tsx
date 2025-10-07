@@ -74,7 +74,7 @@ const Services = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.1 }}
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -83,7 +83,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <span className="inline-block text-sm font-semibold text-secondary bg-secondary/10 px-4 py-2 rounded-full mb-4">
             Layanan Bisnis
@@ -118,14 +118,14 @@ const Services = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.1 }}
               >
                 {/* Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: false, amount: 0.3 }}
+                  viewport={{ once: false, amount: 0.1 }}
                 >
                   <div className={`w-16 h-16 ${service.bgColor} rounded-2xl flex items-center justify-center mb-6`}>
                     <service.icon className={service.color} size={32} />
@@ -147,7 +147,7 @@ const Services = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 + idx * 0.1, duration: 0.6 }}
-                        viewport={{ once: false, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.1 }}
                       >
                         <div className={`mt-1 w-1.5 h-1.5 ${service.bgColor} rounded-full flex-shrink-0`} />
                         <span className="text-foreground">{feature}</span>
@@ -173,7 +173,7 @@ const Services = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: false, amount: 0.3 }}
+                  viewport={{ once: false, amount: 0.1 }}
                 >
                   <div className="aspect-video bg-muted/50 rounded-2xl flex items-center justify-center">
                     <service.icon className={service.color} size={80} strokeWidth={1} />

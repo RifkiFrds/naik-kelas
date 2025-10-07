@@ -38,7 +38,7 @@ const Partnership = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.1 }}
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -47,7 +47,7 @@ const Partnership = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.2 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <span className="inline-block text-sm font-semibold text-accent bg-accent/10 px-4 py-2 rounded-full mb-4">
             Kemitraan F&amp;B
@@ -66,7 +66,7 @@ const Partnership = () => {
   initial={{ opacity: 0, scale: 0.95 }}
   whileInView={{ opacity: 1, scale: 1 }}
   transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }}
+  viewport={{ once: false, amount: 0.1 }}
 >
   <div className="relative rounded-3xl overflow-hidden shadow-xl max-w-3xl w-full mx-auto">
     <img
@@ -103,7 +103,7 @@ const Partnership = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * index, duration: 0.8 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.1 }}
             >
               {pkg.popular && (
                 <div className="absolute top-4 right-4">
@@ -133,7 +133,7 @@ const Partnership = () => {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 + idx * 0.1, duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.1 }}
                   >
                     <CheckCircle2 className="text-secondary flex-shrink-0 mt-0.5" size={16} />
                     <span className="text-sm text-foreground">{feature}</span>
@@ -170,7 +170,7 @@ const Partnership = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -194,7 +194,7 @@ const Partnership = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4 + idx * 0.1, duration: 0.6 }}
-                  viewport={{ once: false, amount: 0.3 }}
+                  viewport={{ once: false, amount: 0.1 }}
                 >
                   <div className="text-2xl font-heading font-bold text-secondary mb-1">
                     {benefit.value}
