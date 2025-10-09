@@ -13,15 +13,15 @@ All colors MUST be HSL.
     --foreground: 221 63% 20%;
 
     /* Naik Kelas Brand Colors */
-    --primary: 221 63% 33%; /* Navy Blue #1E3A8A */
+    --primary: 211 35% 31%; /* New Blue #334e69 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 221 63% 45%;
+    --primary-light: 211 35% 41%;
     
-    --secondary: 160 84% 39%; /* Emerald Green #10B981 */
+    --secondary: 120 100% 50%; /* Neon Green */
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 160 84% 50%;
+    --secondary-light: 120 100% 60%;
     
-    --accent: 48 96% 53%; /* Yellow #FACC15 */
+    --accent: 30 100% 50%; /* Neon Orange */
     --accent-foreground: 221 63% 20%;
     
     /* Neutral colors */
