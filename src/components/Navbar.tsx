@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom"; // Impor useLocation dan Link
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Dapatkan lokasi saat ini
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +27,11 @@ const Navbar = () => {
     { label: "Kontak", href: "#kontak" },
   ];
 
+  // Fungsi untuk membuat tautan yang benar
+  const getLinkUrl = (href: string) => {
+    return isHomePage ? href : `/${href}`;
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
@@ -35,7 +43,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-heading font-bold text-xl">
                 NK
@@ -44,14 +52,14 @@ const Navbar = () => {
             <span className="font-heading font-bold text-xl text-foreground hidden sm:block">
               Naik Kelas
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={getLinkUrl(link.href)}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
               >
                 {link.label}
@@ -66,7 +74,7 @@ const Navbar = () => {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
               asChild
             >
-              <a href="#kontak">Konsultasi Gratis</a>
+              <a href={getLinkUrl("#kontak")}>Konsultasi Gratis</a>
             </Button>
           </div>
 
@@ -87,7 +95,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={getLinkUrl(link.href)}
                   className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -99,7 +107,7 @@ const Navbar = () => {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full"
                 asChild
               >
-                <a href="#kontak" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href={getLinkUrl("#kontak")} onClick={() => setIsMobileMenuOpen(false)}>
                   Konsultasi Gratis
                 </a>
               </Button>
