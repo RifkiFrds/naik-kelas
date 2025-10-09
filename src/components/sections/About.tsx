@@ -8,7 +8,7 @@ const About = () => {
       icon: Eye,
       title: "Visi Kami",
       description:
-        "Menjadi platform solusi bisnis terpadu terkemuka yang memberdayakan UMKM dan Startup untuk berkembang dan bersaing di pasar global.",
+        "Mendorong pertumbuhan wirausaha & profesional Indonesia agar siap bersaing di era digital dan global.",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
@@ -16,7 +16,7 @@ const About = () => {
       icon: Target,
       title: "Misi Kami",
       description:
-        "Menyediakan layanan komprehensif dari legalitas, ekspansi, hingga kemitraan bisnis dengan pendekatan yang personal dan profesional.",
+        "Menyediakan edukasi & layanan bisnis yang praktis dan aplikatif, Membangun komunitas kolaboratif bagi pebisnis & kreator, hingga Membantu UMKM naik kelas melalui kemitraan, teknologi, & inovasi.",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
     },
@@ -24,7 +24,7 @@ const About = () => {
       icon: Sparkles,
       title: "Nilai Kami",
       description:
-        "Integritas, inovasi, dan komitmen untuk pertumbuhan bersama. Kami percaya setiap bisnis memiliki potensi untuk naik kelas.",
+        "Integritas, Edukasi & Aksi Nyata, Kolaborasi & Komunitas, Transparan & Terpercaya dan komitmen untuk pertumbuhan bersama. Kami percaya setiap bisnis memiliki potensi untuk naik kelas.",
       color: "text-accent",
       bgColor: "bg-accent/10",
     },
@@ -55,7 +55,7 @@ const About = () => {
             Siapa Kami?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Naik Kelas adalah platform solusi bisnis terpadu yang fokus membantu UMKM dan Startup mencapai potensi maksimal mereka.
+           Naik Kelas bukan sekadar platform, tapi gerakan untuk membantu pebisnis dan profesional tumbuh lebih cepat.
           </p>
         </motion.div>
 
